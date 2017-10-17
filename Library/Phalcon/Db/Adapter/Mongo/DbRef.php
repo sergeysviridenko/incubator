@@ -1,4 +1,5 @@
 <?php
+
 /*
   +------------------------------------------------------------------------+
   | Phalcon Framework                                                      |
@@ -15,6 +16,7 @@
   | Authors: Tuğrul Topuz <tugrultopuz@gmail.com>                          |
   +------------------------------------------------------------------------+
 */
+
 namespace Phalcon\Db\Adapter\Mongo;
 
 class DbRef extends \MongoDBRef

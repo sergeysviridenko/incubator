@@ -30,6 +30,7 @@ use Phalcon\Cache\BackendInterface;
  * This backend uses wincache as cache backend
  *
  * @package Phalcon\Cache\Backend
+ * @deprecated wincache functions
  * @property \Phalcon\Cache\FrontendInterface _frontend
  */
 class Wincache extends Backend implements BackendInterface

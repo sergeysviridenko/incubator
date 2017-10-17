@@ -48,6 +48,8 @@ class Mongo extends Base implements AdapterInterface, \ArrayAccess
      */
     public function __construct($options)
     {
+        parent::__construct($options);
+        
         if (!isset($options['collection'])) {
             throw new Exception("Parameter 'collection' is required");
         }

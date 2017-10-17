@@ -1,0 +1,9 @@
+parameters:
+    bootstrap: %rootDir%/../../../tests/phpstan.php
+
+    excludes_analyse:
+        - %rootDir%/../../../Library/Phalcon/Session/*
+        - %rootDir%/../../../Library/Phalcon/Cache/Backend/Wincache.php
+        - %rootDir%/../../../Library/Phalcon/Validation/Validator/MongoId.php
+    universalObjectCratesClasses:
+        - \MongoId

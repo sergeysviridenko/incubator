@@ -33,6 +33,8 @@ class NestedSet extends Behavior implements BehaviorInterface
 
     public function __construct($options = null)
     {
+        parent::__construct();
+
         if (isset($options['db']) && $options['db'] instanceof AdapterInterface) {
             $this->db = $options['db'];
         }

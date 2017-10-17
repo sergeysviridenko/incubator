@@ -23,6 +23,7 @@ use Phalcon\Db\Result\Serializable;
 /**
  * Phalcon\Db\Adapter\Cacheable\Mysql
  * Every query executed via this adapter is automatically cached
+ * @property Phalcon\Db\Adapter\Pdo\Mysql $_cache
  */
 class Mysql extends \Phalcon\Db\Adapter\Pdo\Mysql
 {

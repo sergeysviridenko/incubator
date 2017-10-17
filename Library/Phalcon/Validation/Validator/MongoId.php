@@ -27,7 +27,7 @@ use Phalcon\Validation\Exception as ValidationException;
 
 /**
  * MongoId validator
- *
+ * @deprecated
  * @package Phalcon\Validation\Validator
  */
 class MongoId extends Validator

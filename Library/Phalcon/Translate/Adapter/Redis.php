@@ -47,6 +47,8 @@ class Redis extends Base implements AdapterInterface
      */
     public function __construct(array $options)
     {
+        parent::__construct($options);
+        
         if (!isset($options['redis'])) {
             throw new Exception("Parameter 'redis' is required");
         }

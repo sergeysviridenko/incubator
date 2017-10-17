@@ -27,6 +27,13 @@ use Phalcon\Http\Client\Response;
 use Phalcon\Http\Uri;
 use Phalcon\Http\Request\Method;
 
+/**
+ * \Phalcon\Web\Tools\Library\Bootstrap
+ *
+ * @method bool stream_context_set_option(resource $stream_or_context , string $wrapper , string $option , mixed $value)
+ * @method bool stream_context_set_option(resource $stream_or_context , array $options)
+ * @package Phalcon\Web\Tools\Library
+ */
 class Stream extends Request
 {
     private $context = null;
@@ -64,11 +71,20 @@ class Stream extends Request
         ]);
     }
 
+    /**
+     * @param string $option
+     * @param mixed $value
+     * @return bool
+     */
     public function setOption($option, $value)
     {
         return stream_context_set_option($this->context, 'http', $option, $value);
     }
 
+    /**
+     * @param array $option
+     * @return bool
+     */
     public function setOptions($options)
     {
         return stream_context_set_option($this->context, ['http' => $options]);

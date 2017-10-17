@@ -59,6 +59,8 @@ class Database extends Base implements AdapterInterface, \ArrayAccess
      */
     public function __construct(array $options)
     {
+        parent::__construct($options);
+
         if (!isset($options['db'])) {
             throw new Exception("Parameter 'db' is required");
         }

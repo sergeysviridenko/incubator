@@ -75,6 +75,7 @@ before_script:
   - cat ${TRAVIS_BUILD_DIR}/tests/_data/dump.sql | mysql -u root incubator
   # See https://github.com/aerospike/aerospike-client-php/issues/127
   - '[[ "${PHP_MAJOR:0:1}" == "5" ]] || bash ${TRAVIS_BUILD_DIR}/tests/_ci/install_aserver.sh'
+  - '[[ "$PHP_MAJOR" == "5" ]] || composer require --dev phpstan/phpstan'
 
 script:
   - vendor/bin/phpcs
@@ -82,6 +83,7 @@ script:
   - vendor/bin/codecept run -v tests/unit
   - '[[ "$PHP_MAJOR" == "5" ]] || vendor/bin/codecept run -v tests/aerospike'
   - '[[ "$PHP_MAJOR" == "7" ]] || vendor/bin/codecept run -v tests/unit5x'
+  - '[[ "$PHP_MAJOR" == "5" ]] || vendor/bin/phpstan analyse -l 0 phpstan.neon Library'
 
 notifications:
   email:

@@ -34,6 +34,8 @@ use Phalcon\Db\Adapter\MongoDB\Collection as AdapterCollection;
  * Class MongoCollection
  *
  * @property ManagerInterface _modelsManager
+ * @method afterFetch()
+ *
  * @package Phalcon\Mvc
  */
 abstract class MongoCollection extends PhalconCollection implements Unserializable

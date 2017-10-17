@@ -34,6 +34,8 @@ class ResourceBundle extends Base implements AdapterInterface
      */
     public function __construct($options)
     {
+        parent::__construct($options);
+
         if (!is_array($options)) {
             throw new Exception('Invalid options');
         }

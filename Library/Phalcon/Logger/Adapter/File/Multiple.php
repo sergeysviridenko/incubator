@@ -58,6 +58,8 @@ class Multiple extends FileLogger implements AdapterInterface
      */
     public function __construct($path, array $options = [])
     {
+        parent::__construct($path, $options);
+
         $path = rtrim($path, ' ' . \DIRECTORY_SEPARATOR);
         if (!file_exists($path) || !is_dir($path)) {
             throw new LoggerException('Directory ' . $path . ' does not exist!');
